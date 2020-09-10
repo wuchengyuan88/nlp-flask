@@ -1,0 +1,61 @@
+<!-- 
+Reference: https://towardsdatascience.com/develop-a-nlp-model-in-python-deploy-it-with-flask-step-by-step-744f3bdd7776
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Deep Learning NLP App with Flask
+		</div>
+		<h2>Multi-class Document Classification</h2>
+
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p><b>Enter Your Text Here:</b></p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="8" cols="80">
+The current feedback operational amplifiers (CFOAs) are receiving increasing attention as basic building blocks in analog circuit design. This paper gives an overview of the applications of the CFOAs, in particular several new circuits employing the CFOA as the active element are given. These circuits include differential voltage amplifiers, differential integrators, nonideal and ideal inductors, frequency dependent negative resistors and filters. The advantages of using the CFOAs in realizing low sensitivity universal filters with grounded elements will be demonstrated by several new circuits suitable for VLSI implementation. PSPICE simulations using the AD844-CFOA which indicate the frequency limitations of some of the proposed circuits are included.
+</textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="Classify">
+		
+	</form>
+		
+	</div>
+
+	
+<br><br>	
+Note: We classify academic articles into 11 categories (3 domains), namely:
+<ul>
+<li>Code 0: ECE  (Electrical and Computer Engineering), Electricity</li>
+<li>Code 1: ECE, Digital Control</li>
+<li>Code 2: ECE, Operational amplifier</li>
+<li>Code 3: Psychology, Social cognition</li>  
+<li>Code 4: Psychology, Child abuse</li>
+<li>Code 5: Psychology, Depression</li>
+<li>Code 6: Psychology, Attention</li>
+<li>Code 7: Biochemistry, Molecular biology</li>
+<li>Code 8: Biochemistry, Immunology</li>
+<li>Code 9: Biochemistry, Polymerase chain reaction</li>
+<li>Code 10: Biochemistry, Northern blotting</li>  
+</ul>
+
+<br>
+Reference: 
+<br>
+Model is trained on <a href="https://data.mendeley.com/datasets/9rw3vkcfy4/2">Web of Science dataset</a>, which is part of a paper, <a href="https://arxiv.org/abs/1709.08267">HDLTex: Hierarchical Deep Learning for Text Classification</a>, by Kamran Kowsari et al.
+</body>
+</html>

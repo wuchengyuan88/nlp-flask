@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			NLP App
+		</div>
+		<h2>Multi-class Document Classification</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 0%}
+	<h2 style="color:blue;">Code 0: ECE  (Electrical and Computer Engineering), Electricity</h2>
+	{% elif prediction == 1%}
+	<h2 style="color:blue;">Code 1: ECE, Digital Control</h2>
+	{% elif prediction == 2%}
+	<h2 style="color:blue;">Code 2: ECE, Operational amplifier</h2>
+	{% elif prediction == 3%}
+	<h2 style="color:blue;">Code 3: Psychology, Social cognition</h2>
+	{% elif prediction == 4%}
+	<h2 style="color:blue;">Code 4: Psychology, Child abuse</h2>
+	{% elif prediction == 5%}
+	<h2 style="color:blue;">Code 5: Psychology, Depression</h2>
+	{% elif prediction == 6%}
+	<h2 style="color:blue;">Code 6: Psychology, Attention</h2>
+	{% elif prediction == 7%}
+	<h2 style="color:blue;">Code 7: Biochemistry, Molecular biology</h2>
+	{% elif prediction == 8%}
+	<h2 style="color:blue;">Code 8: Biochemistry, Immunology</h2>
+	{% elif prediction == 9%}
+	<h2 style="color:blue;">Code 9: Biochemistry, Polymerase chain reaction</h2>
+	{% elif prediction == 10%}
+	<h2 style="color:blue;">Code 10: Biochemistry, Northern blotting</h2>
+	{% endif %}
+	</div>
+<br><br>
+<button onclick="window.history.back()">Go Back</button>
+</body>
+</html>
