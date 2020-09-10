@@ -188,7 +188,7 @@ plt.show()
 with open('tokenizer.pickle', 'wb') as handle:
     pickle.dump(tokenizer, handle, protocol=3)
 # Calling `save('my_model')` creates a SavedModel folder `my_model`.
-model.save("my_model_testing")
+model.save("my_model")
 
 ################
 print("--- %s seconds ---" % (time.time() - start_time))
