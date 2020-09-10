@@ -186,9 +186,9 @@ plt.show()
 # https://stackoverflow.com/questions/45735070/keras-text-preprocessing-saving-tokenizer-object-to-file-for-scoring
 # saving
 with open('tokenizer.pickle', 'wb') as handle:
-    pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    pickle.dump(tokenizer, handle, protocol=3)
 # Calling `save('my_model')` creates a SavedModel folder `my_model`.
-model.save("my_model")
+model.save("my_model_testing")
 
 ################
 print("--- %s seconds ---" % (time.time() - start_time))
