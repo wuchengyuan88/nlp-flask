@@ -31,7 +31,7 @@ with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
     
 # It can be used to reconstruct the model identically.
-model = tf.keras.models.load_model("my_model")
+model = tf.keras.models.load_model("h5_model.h5")
 
 
 df = pd.read_csv('xydata.csv')

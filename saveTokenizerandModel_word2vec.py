@@ -188,7 +188,9 @@ plt.show()
 with open('tokenizer.pickle', 'wb') as handle:
     pickle.dump(tokenizer, handle, protocol=3)
 # Calling `save('my_model')` creates a SavedModel folder `my_model`.
-model.save("my_model")
+#model.save("my_model")
+# Saving for older TensorFlow TF2.0.0
+model.save("h5_model.h5")
 
 ################
 print("--- %s seconds ---" % (time.time() - start_time))
