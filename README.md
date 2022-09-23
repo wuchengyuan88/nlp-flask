@@ -1,5 +1,7 @@
-# nlp flask
- Multi-class document classification Flask App
+# NLP Flask
+Multi-class document classification Flask App
+
+The app classifies articles into different categories (e.g. Psychology, Biochemistry) and subcategories (e.g. Social cognition, Molecular biology). 
  
 Deployed at: https://wuchengyuan.pythonanywhere.com/
 
